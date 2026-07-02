@@ -21,4 +21,13 @@ because inititally we were tracking data/folder from git now  we remove it for D
    After this commit and push we will saw 2 files pushed to S3.
 
 10.>Do a git add commit push to mark this stage as first version of data.()
-    because earlier when we saw the git status --> we will see untracked file (S3).   
+    because earlier when we saw the git status --> we will see untracked file (S3).  
+
+11>.Now make changes to mycode.py to append  a new row in data, check changes via "py -m dvc status" 
+   and when we saw the dvc status : it will gave us outputs as changed outs: modified: data.
+
+12>. Again do dvc commit and push.--> to make tracking of the pushed data.  
+    earlier it will ask to you , are you sure to proceed with the modified data , say yes or no.
+    then it wil push or collect 2 more files, except the 2 which were pushed earlier in the S3 dataset. 
+    And then we see (git sttaus) it will show that there is lot to update ,whatever we changed earlier
+    but we'll not going to make changes to the untracked S3 bucket files.   
